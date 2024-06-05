@@ -1,0 +1,71 @@
+package Appointment;
+use strict;
+use warnings;
+
+
+my $self;
+# DefaultConstructor
+#sub new {
+#	my ($class, %args) = @_;
+#	my $self = \%args;
+#
+#	bless $self, $class;
+#
+#	return $self;
+#}
+
+# Named Parameter
+sub new {
+	my ($class, $args) =@_;
+	our $self = bless {
+		id => $args->{id},
+		date => $args->{date},
+		time => $args->{time},
+		$class
+	};
+	return $self;
+}
+
+sub setId {
+	my ($self, $id) = @_;
+	$self->{_id} = $id if defined ($id);
+	return $self->{_id};
+}
+
+sub getId {
+	my ($self) = @_;
+	return $self->{_id};
+}
+
+sub setDate {
+	my ($self, $date) = @_;
+	$self->{date} = $date if defined($date);
+	return $self->{date};
+}
+
+sub getDate {
+	my($self) = @_;
+	return $self->{date};
+}
+
+sub setTime {
+	my($self, $time) = @_;
+	$self->{time} = $time if defined($time);
+	return $self->{time};
+}
+
+sub getTime {
+	my ($self) = @_;
+	return $self->{time};
+}
+
+
+sub DESTROY {
+	$self = shift;
+	print "The object is Destroyed...";
+}
+
+
+
+
+1;

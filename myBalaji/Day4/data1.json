@@ -1,0 +1,20 @@
+{
+   "Professional Claim" : {
+      "doctor_name" : "john",
+      "fee" : "$30",
+      "patient_name" : "bella",
+      "treatment" : [
+         "cough",
+         "viral infection"
+      ]
+   },
+   "Dental Claim" : {
+      "treatment" : [
+         "cleaning",
+         "decay removal"
+      ],
+      "patient_name" : "selena",
+      "fee" : "$50",
+      "doctor_name" : "harry"
+   }
+}
